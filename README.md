@@ -28,6 +28,7 @@ The network consists of:
 # Verification Commands
 - show vlan brief
 - show interfaces trunk
+- show running-config
 
 # Results
 - VLANs were successfully created and assigned
