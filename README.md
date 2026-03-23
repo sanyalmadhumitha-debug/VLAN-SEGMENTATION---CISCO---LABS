@@ -49,7 +49,7 @@ This project helped me
 - Trunk port configuration
 - show vlan brief output
 - show interfaces trunk output
-- Ping verification
+- Connectivity test
 
 # Author
 MADHUMITHA SANYAL
