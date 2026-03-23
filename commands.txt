@@ -1,0 +1,63 @@
+# Small Office VLAN Segmentation - Configuration Commands
+
+========================================
+SWITCH 0 (SW-0)
+========================================
+
+# SW-0
+enable
+configure terminal
+hostname SW-0
+vlan 10
+ name HR
+vlan 20
+ name SALES
+vlan 30
+ name ACCOUNTS
+interface fastEthernet 0/1
+ switchport mode access
+ switchport access vlan 10
+interface fastEthernet 0/2
+ switchport mode access
+ switchport access vlan 20
+interface fastEthernet 0/3
+ switchport mode access
+ switchport access vlan 30
+interface fastEthernet 0/24
+ switchport mode trunk
+end
+copy running-config startup-config
+
+========================================
+SWITCH 1 (SW-1)
+========================================
+
+enable
+configure terminal
+hostname SW-1
+
+vlan 10
+ name HR
+vlan 20
+ name SALES
+vlan 30
+ name ACCOUNTS
+
+interface fastEthernet 0/1
+ switchport mode access
+ switchport access vlan 10
+
+interface fastEthernet 0/2
+ switchport mode access
+ switchport access vlan 20
+
+interface fastEthernet 0/3
+ switchport mode access
+ switchport access vlan 30
+
+interface fastEthernet 0/24
+ switchport mode trunk
+
+end
+copy running-config startup-config
+copy running-config startup-config
