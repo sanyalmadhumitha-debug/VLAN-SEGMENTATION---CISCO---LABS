@@ -11,19 +11,21 @@ This project simulates a small office network where different departments are se
 
 # Network Setup
 The network consists of:
-- Multiple switches
-- End devices (PCs)
-- VLANs created for different office departments
-- Trunk links between switches for VLAN communication
+- Cisco 2960 switches(2)
+- End devices PCs (6)
+- VLANs created for different office departments(VLAN 10-HR, VLAN 20-SALES, VLAN 30-ACCOUNTS)
 - Access ports assigned to end devices based on department
+- Trunk links between switches for VLAN communication
+
 
 # Configuration Steps
-1. Created the required VLANs on the switches.
+1. Created VLAN 10, VLAN 20, and VLAN 30 on both switches.
 2. Assigned names to the VLANs for easier identification.
-3. Configured access ports and assigned them to the correct VLANs.
+3. Configured access ports and assigned them to the correct VLAN.
 4. Configured trunk ports between switches to carry VLAN traffic.
 5. Verified VLAN configuration using CLI commands.
-6. Tested connectivity between end devices in the same VLAN.
+6. Finally, I tested the connectivity between end devices in the same VLAN.
+
 
 # Verification Commands
 - show vlan brief
